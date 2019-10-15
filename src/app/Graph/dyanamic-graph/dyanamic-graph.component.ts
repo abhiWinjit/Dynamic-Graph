@@ -10,6 +10,7 @@ export class DyanamicGraphComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }
