@@ -8,11 +8,11 @@
   line-height: 1.42;
   border-radius: 30px;
   color: rgb(0, 25, 48);
-  background-color: #9afcff;
+  background-color: #00b8be;
   border-color: rgb(0, 25, 48);
-  margin-left: 0px;
+  /* margin-left: 0px;
   margin-top: 50px;
-  margin-bottom: 0px;
+  margin-bottom: 0px; */
 }
 
 .btn-circle-end {
@@ -34,25 +34,45 @@
 
 .vl {
   border-left: 1.5px solid rgb(0, 0, 0);
-  height: 230px;
+  height: auto;
   margin-left: 30px;
 }
 
-.vb {
+.vl-message {
+  border-left: 1.5px solid rgb(0, 0, 0);
+  height: auto;
+  margin-left: 25px;
+  margin-top: 15px;
+}
+
+.vl-add {
+  border-left: 1.5px solid rgb(0, 0, 0);
+  height: auto;
+  margin-left: 30px;
+}
+
+.hl {
   border-bottom: 1.5px solid rgb(0, 0, 0);
   width: 100px;
-  margin-top: 0px;
-  margin-left: 30px;
+  margin-top: 100px;
+  margin-left: -15px;
   margin-right: 0px;
 }
 
-.vb-add {
+.hl-add {
   border-bottom: 1.5px solid rgb(0, 0, 0);
   width: 100px;
-  margin-top: 0px;
+  margin-top: 10px;
   margin-left: 0px;
   margin-right: 0px;
+}
 
+.hl-message {
+  border-bottom: 1.5px solid rgb(0, 0, 0);
+  width: 150px;
+  margin-top: 10px;
+  margin-left: 0px;
+  margin-right: auto;
 }
 
 .btn-circle-add {
@@ -66,7 +86,7 @@
   color: rgb(166, 212, 255);
   background-color: #f0ff91;
   border-color: #d7e27f;
-  margin-left: 100px;
+  margin-left: auto;
   margin-bottom: -20px;
 }
 
@@ -89,6 +109,10 @@
   line-height: 1.42;
   border-radius: 17px;
   background-color: rgb(216, 216, 216);
+  margin-bottom: -42.5px;
+  margin-left: 0px;
+  margin-top: 30px;
+  z-index: 1;
 }
 
 .btn-circle-message {
@@ -102,6 +126,16 @@
   color: rgb(166, 212, 255);
   background-color: #f0ff91;
   border-color: #d7e27f;
+  margin-left: 150px;
+  margin-bottom: -25px;
+  margin-right: auto;
+
+  /* margin-left: 0px;
+  margin-top: 50px;
+  margin-bottom: 0px; */
+
+  /* -webkit-text-stroke-width: medium;
+  margin-bottom: 0px; */
 }
 
 div.vertical-line {
@@ -120,4 +154,112 @@ a {
 i {
   color: #012422;
   font-size: 18px;
+}
+
+.row {
+  margin: auto;
+}
+
+div {
+  display: block;
+}
+
+.node-children {
+  margin: 0 32px 32px 34px;
+  list-style: none;
+}
+
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+.start {
+  position: relative;
+  display: flex;
+  margin: 16px;
+}
+
+.start::after {
+  content: '';
+  display: block;
+  border-left: 2px solid #8897a2;
+  width: 0;
+  height: 0;
+  left: 30px;
+  top: 77px;
+  padding: 16px 0;
+  position: absolute;
+
+  /* content: '';
+  display: block;
+  border-left: 2px solid #8897a2;
+  width: 0;
+  height: 0;
+  left: 11px;
+  top: 32px;
+  padding: 16px 0;
+  position: absolute; */
+}
+
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+.node-container {
+  position: relative;
+  margin: 0 0 16px 16px;
+}
+
+.node-container::before {
+  content: '';
+  position: absolute;
+  display: block;
+  border-left: 2px solid #8897a2;
+  color: #41d6c3;
+  width: 0;
+  height: 18px;
+  left: -44px;
+  top: -17px;
+}
+
+.node-container::after {
+  content: '';
+  position: absolute;
+  display: block;
+  border-left: 2px solid #8897a2;
+  width: 0;
+  height: 100%;
+  left: -44px;
+  top: 16px;
+}
+
+.node {
+  position: relative;
+  display: flex;
+  outline: none;
+  width: 460px;
+  background-color: #fff;
+  height: 90px;
+}
+
+.node::before {
+  content: '';
+  display: block;
+  border-bottom: 2px solid #8897a2;
+  border-left: 2px solid #8897a2;
+  border-bottom-left-radius: 1%;
+  width: 150px;
+  height: 47px;
+  left: -44px;
+  top: 0;
+  padding: 0;
+  position: absolute;
+  z-index: -1;
 }
