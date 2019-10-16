@@ -10,6 +10,9 @@
   color: rgb(0, 25, 48);
   background-color: #9afcff;
   border-color: rgb(0, 25, 48);
+  margin-left: 0px;
+  margin-top: 50px;
+  margin-bottom: 0px;
 }
 
 .btn-circle-end {
@@ -43,6 +46,15 @@
   margin-right: 0px;
 }
 
+.vb-add {
+  border-bottom: 1.5px solid rgb(0, 0, 0);
+  width: 100px;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+
+}
+
 .btn-circle-add {
   width: 40px;
   height: 40px;
@@ -54,6 +66,8 @@
   color: rgb(166, 212, 255);
   background-color: #f0ff91;
   border-color: #d7e27f;
+  margin-left: 100px;
+  margin-bottom: -20px;
 }
 
 .btn-circle-circular {
