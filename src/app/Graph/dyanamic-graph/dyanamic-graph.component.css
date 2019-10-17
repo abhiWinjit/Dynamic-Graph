@@ -272,7 +272,7 @@ li {
   display: block;
   border-bottom: 2px solid #8897a2;
   border-left: 2px solid #8897a2;
-  border-bottom-left-radius: 1%;
+  border-bottom-left-radius: 15%;
   width: 150px;
   height: 47px;
   left: -44px;
@@ -297,7 +297,7 @@ li {
   display: block;
   border-bottom: 2px solid #8897a2;
   border-left: 2px solid #8897a2;
-  border-bottom-left-radius: 1%;
+  border-bottom-left-radius: 15%;
   width: 150px;
   height: 47px;
   left: 214px;
