@@ -1,7 +1,5 @@
 <div class="container">
   <div class="row">
-    <!-- <div class="col-md-12">
-      <div class="row"> -->
     <div class="col-md-12">
 
       <div class="start">
@@ -11,40 +9,47 @@
       <ul class="node-children">
         <li class="child">
           <div class="node-container">
-            <div class="node">
+            <div class="node node--expanded">
               <div class="btn-circle-condition">IF</div>
-            </div>
-          </div>
-        </li>
-        <div class="vl">
-          <div class="row">
-            <div class="hl-message">
-              <div class="btn-circle-condition">IF</div>
-              <!-- <div class="row"> -->
               <div class="btn-circle-message"><i class="fa fa-comment"></i></div>
-              <div class="vl-message">
-                <div class="row">
-                  <div class="hl-add">
+            </div>
+        <li class="child">
+          <div class="node-container">
+            <div class="node node--expanded">
+              <div class="btn-circle-condition">IF</div>
+              <div class="btn-circle-message"><i class="fa fa-comment"></i></div>
+            </div>
+
+            <ul class="node-children">
+              <li class="child">
+                <div class="node-container-add">
+                  <div class="node-add node--expanded-add">
+                    <div class="btn-circle-add"><i class="fa fa-plus"></i></div>
                   </div>
                 </div>
-                <!-- </div> -->
-              </div>
-              <!-- </div> -->
-              <!-- <div class="btn-circle-add"><i class="fa fa-plus"></i></div> -->
-            </div>
+              </li>
+            </ul>
           </div>
-          <div class="row">
-            <div class="col-md-12">
-              <div class="hl">
-                <div class="btn-circle-end">End</div>
+        </li>
+        <ul class="node-children">
+          <li class="child">
+            <div class="node-container-add">
+              <div class="node-add node--expanded-add">
+                <div class="btn-circle-add"><i class="fa fa-plus"></i></div>
               </div>
             </div>
-          </div>
-        </div>
-
-      </ul>
+          </li>
+        </ul>
     </div>
-    <!-- </div>
-    </div> -->
+    </li>
+    <li class="child">
+      <div class="node-container">
+        <div class="node node--expanded-else">
+          <div class="btn-circle-end">Else</div>
+        </div>
+      </div>
+    </li>
+    </ul>
   </div>
+</div>
 </div>
