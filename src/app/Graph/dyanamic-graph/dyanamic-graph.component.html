@@ -1,55 +1,59 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-
       <div class="start">
         <div class="btn-circle-start">Start</div>
         <h3></h3>
       </div>
       <ul class="node-children">
         <li class="child">
-          <div class="node-container">
-            <div class="node node--expanded">
-              <div class="btn-circle-condition">IF</div>
-              <div class="btn-circle-message"><i class="fa fa-comment"></i></div>
-            </div>
-        <li class="child">
-          <div class="node-container">
-            <div class="node node--expanded">
-              <div class="btn-circle-condition">IF</div>
-              <div class="btn-circle-message"><i class="fa fa-comment"></i></div>
-            </div>
-
-            <ul class="node-children">
-              <li class="child">
-                <div class="node-container-add">
-                  <div class="node-add node--expanded-add">
-                    <div class="btn-circle-add"><i class="fa fa-plus"></i></div>
+          <ng-template #recursion let-arrayJson>
+        <li class="child" *ngFor="let node of arrayJson">
+          <!-- {{node.dataParentId}} -->
+          <ng-container *ngIf="node.dataChild.length >= 0">
+            <div class="node-container">
+              <div class="node node--expanded">
+                <div class="btn-circle-condition">IF</div>
+                <!-- <p>{{node.dataParentId}}</p> -->
+                <div class="btn-circle-message"><i class="fa fa-comment"></i></div>
+                <button (click)="deleteModule(node.dataNodeId,node.dataParentId)" class="btn btn-circle-add-main"><i
+                    class="fa fa-trash"></i></button>
+              </div>
+              <ng-container *ngTemplateOutlet="recursion;
+          context:{ $implicit: node.dataChild }"></ng-container>
+              <ul class="node-children">
+                <li class="child">
+                  <div class="node-container-add">
+                    <div class="node-add node--expanded-add">
+                      <!-- <p>{{node.dataChildId}}</p> -->
+                      <button (click)="addModule(node.dataNodeId,node.dataParentId)" class="btn btn-circle-add"> <i
+                          class="fa fa-plus"></i></button>
+                    </div>
                   </div>
-                </div>
-              </li>
-            </ul>
+                </li>
+              </ul>
+            </div>
+          </ng-container>
+        </li>
+        </ng-template>
+        <ng-container *ngTemplateOutlet="recursion;
+    context:{ $implicit: arrayJson }"></ng-container>
+        <li class="child">
+          <div class="node-container-1">
+            <div class="node node--expanded-add">
+              <button (click)="addModule(arrayJson.dataNodeId,arrayJson.dataParentId)"
+                class="btn btn-circle-add-main"><i class="fa fa-plus"></i></button>
+            </div>
           </div>
         </li>
-        <ul class="node-children">
-          <li class="child">
-            <div class="node-container-add">
-              <div class="node-add node--expanded-add">
-                <div class="btn-circle-add"><i class="fa fa-plus"></i></div>
-              </div>
+        <li class="child">
+          <div class="node-container">
+            <div class="node node--expanded-else">
+              <div class="btn-circle-end">Else</div>
             </div>
-          </li>
-        </ul>
+          </div>
+        </li>
+      </ul>
     </div>
-    </li>
-    <li class="child">
-      <div class="node-container">
-        <div class="node node--expanded-else">
-          <div class="btn-circle-end">Else</div>
-        </div>
-      </div>
-    </li>
-    </ul>
   </div>
-</div>
 </div>
