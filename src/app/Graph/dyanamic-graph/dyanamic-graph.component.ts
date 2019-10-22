@@ -121,6 +121,15 @@ export class DyanamicGraphComponent implements OnInit {
       'dataChild': [
 
       ]
+    },
+    {
+      'dataParentId': 'root',
+      'dataNodeId': '4',
+      'blockName': 'Main menu',
+      'dataChildId': 'null',
+      'dataChild': [
+
+      ]
     }
     // ,
     // {
@@ -166,6 +175,9 @@ export class DyanamicGraphComponent implements OnInit {
     };
     console.log(parentId);
     this.traverse(nodeId, this.arrayJson, parentId, this.newDynamic, 'add');
+    setTimeout(() => {
+      // this.arrayJson.pop();
+    }, 3000);
     console.log('Doneeeeeeeeee');
   }
 
@@ -178,14 +190,14 @@ export class DyanamicGraphComponent implements OnInit {
 
   traverse(nodeId, array, parentId, newDynamicT: any = {}, adddelete) {
     if (parentId == 'root' && nodeId == null && adddelete == 'add') {
-      this.newDynamic = {
+      newDynamicT = {
         dataParentId: parentId,
         dataNodeId: this.createDynamicId(),
         blockName: '123dasgafdsa',
         dataChildId: null,
         dataChild: []
       };
-      this.arrayJson.push(newDynamicT);
+      array.push(newDynamicT);
       console.log('heyyyyyyyyyyyyyyyyyyy');
       return 1;
     }
