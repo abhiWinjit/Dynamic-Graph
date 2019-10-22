@@ -177,6 +177,18 @@ export class DyanamicGraphComponent implements OnInit {
   }
 
   traverse(nodeId, array, parentId, newDynamicT: any = {}, adddelete) {
+    if (parentId == 'root' && nodeId == null && adddelete == 'add') {
+      this.newDynamic = {
+        dataParentId: parentId,
+        dataNodeId: this.createDynamicId(),
+        blockName: '123dasgafdsa',
+        dataChildId: null,
+        dataChild: []
+      };
+      this.arrayJson.push(newDynamicT);
+      console.log('heyyyyyyyyyyyyyyyyyyy');
+      return 1;
+    }
     for (var p of array) {
       console.log(nodeId);
       if (adddelete == 'deletenode') {
